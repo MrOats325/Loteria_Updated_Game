@@ -13,7 +13,7 @@ public class Card {
     //Constructors 
     public Card(int rank){
         this.rank = rank;
-        String imagePath = "../Loteria_Cards_Png/Loteria_" + rank + ".PNG";
+        String imagePath = "Loteria_Cards_Png/Loteria_" + rank + ".PNG";
         this.image = new ImageIcon(imagePath);
         if (this.image.getImageLoadStatus() != MediaTracker.COMPLETE) {
             System.err.println("Failed to load image: " + imagePath);

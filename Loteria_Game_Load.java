@@ -27,11 +27,6 @@ public class Loteria_Game_Load extends JPanel implements ActionListener {
     private JLabel[][] aiBoardLabels;
     private JLabel aiPlayerLabel;
 
-    //Ai_2
-    private AIPlayer aiPlayer_2;
-    private JLabel[][] aiBoardLabels_2;
-    private JLabel aiPlayerLabel_2;
-
     // Dealer
     private JLabel changer;
     private ArrayList<Card> dealerCards; 
@@ -54,8 +49,6 @@ public class Loteria_Game_Load extends JPanel implements ActionListener {
         deck_dealer.shuffle();
 
         aiPlayer = new AIPlayer(new Deck()); 
-        aiPlayer_2 = new AIPlayer(new Deck()); 
-
 
         winningConditions = new HashMap<>();
         winningConditions.put(1, new DiagonalWinCondition()); 
@@ -204,17 +197,16 @@ public class Loteria_Game_Load extends JPanel implements ActionListener {
 
     private void initializeAIBoardLabels() {
         aiBoardLabels = new JLabel[4][4];
-        aiBoardLabels_2 = new JLabel[4][4];
 
-        int posX = 1100; 
-        int posY = 20;
-        int xOffset = 50;
-        int yOffset = 70;
+        int posX = 1050; 
+        int posY = 120;
+        int xOffset = 70;
+        int yOffset = 90;
 
         for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 4; col++) {
                 JLabel label = new JLabel();
-                label.setBounds(posX + xOffset * col, posY + yOffset * row, 50, 70);
+                label.setBounds(posX + xOffset * col, posY + yOffset * row, 70, 90);
                 label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
                 label.setOpaque(true);
                 label.setBackground(Color.WHITE);
@@ -223,20 +215,11 @@ public class Loteria_Game_Load extends JPanel implements ActionListener {
             }
         }
 
-
-
         aiPlayerLabel = new JLabel();
-        aiPlayerLabel.setBounds(posX , 300, 120, 60);
+        aiPlayerLabel.setBounds(posX + 85 , 500, 120, 60);
         aiPlayerLabel.setText("Player 2");
         aiPlayerLabel.setFont(new Font("Century", Font.BOLD, 25));
         add(aiPlayerLabel);
-
-
-        aiPlayerLabel_2 = new JLabel();
-        aiPlayerLabel_2.setBounds(posX , 637, 120, 60);
-        aiPlayerLabel_2.setText("Player 3");
-        aiPlayerLabel_2.setFont(new Font("Century", Font.BOLD, 25));
-        add(aiPlayerLabel_2);
     }
 
     void drawCircleOnLabel(int row, int col) {
