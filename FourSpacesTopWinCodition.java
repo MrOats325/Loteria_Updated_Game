@@ -9,10 +9,10 @@ public class FourSpacesTopWinCodition implements WinningCondition{
         // Ensure the top row of buttons are all disabled
         for (int col = 0; col < buttons[0].length; col++) {
             if (buttons[0][col].isEnabled()) {
-                return false; // If any button in the top row is enabled, return false
+                return false; 
             }
         }
-        return true; // All top row buttons are disabled, winning condition met
+        return true;
     }
 
     @Override
@@ -21,10 +21,10 @@ public class FourSpacesTopWinCodition implements WinningCondition{
         int[] topRowIndices = {0, 1, 2, 3};
         for (int index : topRowIndices) {
             if (!aiBoard.get(index).isSelected()) {
-                return false; // If any card in the
+                return false;
             }
     }
-    return true; // All cards in the top row are selected, winning condition met
+    return true; 
     }
     
     

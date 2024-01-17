@@ -2,16 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class GameBoard{
-    private ArrayList<Card> cards; //List of the Cards
-    private Player[] players;  //Array of Players
-    private int currentPlayerIndex; //CurrentPlayerIndex
-    private boolean gameInProgress; //Flag to check if the game condition has been met 
-
+    private ArrayList<Card> cards; 
+    
     public GameBoard(Player[] players){
-        this.players = players; 
         this.cards = new ArrayList<>();
-        this.currentPlayerIndex = 0; 
-        this.gameInProgress = false; 
         initializeBoard(); 
     }
     //Initialize the game board 
@@ -23,18 +17,5 @@ public class GameBoard{
         }
         Collections.shuffle(cards); 
     }
-
-    //Starts the game 
-    public void startGame(){
-        gameInProgress = true; 
-    }
-
-    //End the game
-    public void engGame(){
-        gameInProgress = false; 
-    }
-
-    
-    
 }
 

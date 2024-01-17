@@ -19,10 +19,10 @@ public class TopFourCornersWinCondition implements WinningCondition {
         int[] secondColumnIndices = {1, 5, 9, 13};
         for (int index : secondColumnIndices) {
             if (!aiBoard.get(index).isSelected()) {
-                return false; // If any card in the second column is not selected, return false
+                return false; 
             }
         }
-        return true; // All cards in the second column are selected, winning condition met
+        return true; 
     }
     
 }

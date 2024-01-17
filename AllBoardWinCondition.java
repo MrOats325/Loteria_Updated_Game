@@ -10,10 +10,10 @@ public class AllBoardWinCondition implements WinningCondition{
         for (int row = 0; row < buttons.length; row++) {
             for(int col = 0; col < buttons[row].length; col++)
             if (buttons[row][col].isEnabled()) {
-                return false; // If any button in the second row is enabled, return false
+                return false; 
             }
         }
-        return true; // All second row buttons are disabled, winning condition met
+        return true; 
     }
 
     @Override
@@ -22,10 +22,10 @@ public class AllBoardWinCondition implements WinningCondition{
         int[] allBoard = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
         for (int index : allBoard) {
             if (!aiBoard.get(index).isSelected()) {
-                return false; // If any card in the second column is not selected, return false
+                return false; 
             }
         }
-        return true; // All cards in the second column are selected, winning condition met
+        return true; 
     }
     
 }

@@ -9,10 +9,10 @@ public class SecondColumnSpacesWinCondition implements WinningCondition {
         // Ensure the second row of buttons are all disabled
         for (int row = 0; row < buttons[1].length; row++) {
             if (buttons[row][1].isEnabled()) {
-                return false; // If any button in the second row is enabled, return false
+                return false; 
             }
         }
-        return true; // All second row buttons are disabled, winning condition met
+        return true; 
     }
 
     @Override
@@ -21,10 +21,10 @@ public class SecondColumnSpacesWinCondition implements WinningCondition {
         int[] secondColumnIndices = {1, 5, 9, 13};
         for (int index : secondColumnIndices) {
             if (!aiBoard.get(index).isSelected()) {
-                return false; // If any card in the second column is not selected, return false
+                return false; 
             }
         }
-        return true; // All cards in the second column are selected, winning condition met
+        return true;
     }
     
 }

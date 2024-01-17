@@ -21,10 +21,10 @@ public class DiagonalWinCondition implements WinningCondition {
         int[] diagonalIndices = {12, 9, 6, 3};
         for (int index : diagonalIndices) {
             if (!aiBoard.get(index).isSelected()) {
-                return false; // If any card in the diagonal is not selected, return false
+                return false; 
             }
         }
-        return true; // All cards in the diagonal are selected, winning condition met
+        return true; 
     }
 
     

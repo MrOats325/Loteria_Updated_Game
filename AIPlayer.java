@@ -10,7 +10,7 @@ public class AIPlayer {
     public AIPlayer(Deck deck) {
         this.deck = deck;
         this.deck.shuffle();
-        board = deck.deal(16); // Assuming a 4x4 board
+        board = deck.deal(16); 
 
     }
 
@@ -22,10 +22,10 @@ public class AIPlayer {
                 Card card = board.get(i);
                 if (card.getRank() == dealerCard.getRank() && !card.isSelected()) {
                     card.selectedCard();
-                    int row = i / 4; // Assuming a 4x4 board
+                    int row = i / 4; 
                     int col = i % 4;
                     System.out.println("AI selected a card at position: [" + row + ", " + col + "]");
-                    gameLoad.drawCircleOnLabel(row, col); // Update the AI's board on the UI
+                    gameLoad.drawCircleOnLabel(row, col); 
                     break;
                 }
             }

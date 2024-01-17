@@ -18,9 +18,9 @@ class FourCornersWinCondition implements WinningCondition {
         int[] secondColumn = {0,3,12,15};
         for (int index : secondColumn) {
             if (!aiBoard.get(index).isSelected()) {
-                return false; // If any card in the second column is not selected, return false
+                return false;
             }
         }
-        return true; // All cards in the second column are selected, winning condition met
+        return true; 
     }
 }
