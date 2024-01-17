@@ -2,15 +2,29 @@ import java.awt.MediaTracker;
 
 import javax.swing.ImageIcon; 
 
+/**
+ *  Represents a card in the Loteria game. Each card has a rank, an image, and a selection state.
+ */
 public class Card {
-    //Rank or number of card
+    /**
+     * The rank or num of the card
+     */
     private final int rank; 
-    //image of the card
+    /**
+     * The image of the card
+     */
     private ImageIcon image; 
-    //Flag to check if the card has been selected
+    /**
+     * Flag to check if the card has been selected
+     */
     private boolean isSelected; 
 
-    //Constructors 
+    /**
+     * Constructs a new card with specified rank
+     * Loads the card's images based on its rank
+     * 
+     * @param rank the rank of card 
+     */
     public Card(int rank){
         this.rank = rank;
         String imagePath = "Loteria_Cards_Png/Loteria_" + rank + ".PNG";
@@ -21,25 +35,43 @@ public class Card {
         this.isSelected = false;  
     }
 
-    //Marks the card as selected 
+    /**
+     * Marks the card as selected.
+     */
     public void selectedCard(){
         isSelected = true; 
     }
 
-    //Resets the cards 
+    /**
+     * Resets the card's selected state to false.
+     */
     public void resetCard(){
         isSelected = false; 
     }
 
-    //Getters for card properties 
+    /**
+     * Returns the rank of the card.
+     * 
+     * @return the rank of the card.
+     */
     public int getRank(){
         return rank; 
     }
 
+    /**
+     * Returns the image of the card.
+     * 
+     * @return the image of the card.
+     */
     public ImageIcon getImage(){
         return image; 
     }
 
+    /**
+     * Checks if the card is selected.
+     * 
+     * @return true if the card is selected, false otherwise.
+     */
     public boolean isSelected(){
         return isSelected; 
     }

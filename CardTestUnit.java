@@ -7,7 +7,7 @@ public class CardTestUnit {
 
     @Before
     public void setUp() {
-        card = new Card(5); // Initialize Card with rank 5 for testing
+        card = new Card(5);
         
     }
 
